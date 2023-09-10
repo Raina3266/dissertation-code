@@ -1,0 +1,71 @@
+[package]
+name = "dissertation"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# The asynchronous runtime responsible for running async functions
+tokio = { version = "1", features = ["full", "tracing"] }
+
+# Utilities that make writing async code more convenient
+futures = "0.3"
+
+# HTTP client
+reqwest = { version = "0.11", default-features = false, features = ["rustls-tls", "json", "blocking"] }
+
+# Rate limiter
+governor = "0.6"
+
+# HTML parser
+tl = "0.7"
+
+# CSV handling
+csv = "1"
+
+# Serialization/Deserialization framework
+serde = { version = "1", features = ["derive"] }
+
+# JSON support for serde
+serde_json = "1"
+
+# JSON5 support for serde
+json5 = "0.4"
+
+# Enhanced error handling
+color-eyre = "0.6"
+
+# CLI argument parser
+clap = { version = "4", features = ["derive", "string"] }
+
+# regular expression support
+regex = "1"
+
+# concurrent cache, used to speed up access to the google trends database
+moka = { version = "0.11", features = ["future"] }
+
+# logging libraries
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+# crate for reading values from .env file
+dotenvy = "0.15"
+
+# data processing library for analysis
+polars = { version = "0.32", features = ["lazy"] }
+
+# utilities for displaying a progress bar during processing
+indicatif = "0.17"
+
+# extra utilities for working with iterators
+itertools = "0.11"
+
+# SQLite support
+rusqlite = "0.29"
+
+# A generic connection pool for databases, allows thread-safe access to the database
+r2d2 = "0.8"
+
+# A specific implementation of r2d2 for SQLite
+r2d2_sqlite = "0.22"
+
+statrs = "0.16"
